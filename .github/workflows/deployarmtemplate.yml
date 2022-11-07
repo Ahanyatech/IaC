@@ -25,9 +25,13 @@ jobs:
           # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
           creds: ${{secrets.AZURE_CREDENTIALS}}
           # ClientId of the Azure Service principal created.
-      
-      - name: Deploy Arm template
-        uses: Azure/cli@1.0.4
+          
+      - name: Deploy Azure Resource Manager (ARM) Template
+        uses: Azure/arm-deploy@v1.0.8
         with:
-          inlinescript: |
-            az deployment sub create --location "centralus" --template-file ./ArmTemplates/resourcegroup.json
+           # Provide the scope of the deployment. Valid values are: 'resourcegroup', 'managementgroup', 'subscription'
+           scope: subscription
+           # Override the Subscription Id set by Azure Login.
+           subscriptionId: ${{secrets.Subsciption_Id}}
+            
+    
