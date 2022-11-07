@@ -30,7 +30,7 @@ jobs:
       - uses: Azure/login@v1.4.2
         with:
           # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
-          creds: # optional
+          creds: ${{secrets.AZURE_CREDENTIALS}}
           # ClientId of the Azure Service principal created.
 
       # Runs a set of commands using the runners shell
