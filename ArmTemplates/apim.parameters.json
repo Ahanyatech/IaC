@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "publisherEmail": {
+            "value": "saurabh.az203@outlook.com"
+        },
+        "publisherName": {
+            "value": "Ahanya Technologies" // TODO: Fill in parameter value
+        },
+        "sku": {
+            "value": "Standard"
+        },
+        "skuCount": {
+            "value": 1
+        },
+        "mutualAuthenticationCertificate": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "certificatePassword": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "eventHubNamespaceConnectionString": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "googleClientSecret": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "openIdConnectClientSecret": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "tenantPolicy": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "apiPolicy": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "operationPolicy": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "productPolicy": {
+            "value": "" // TODO: Fill in parameter value
+        },
+        "location": {
+            "value": "" // TODO: Fill in parameter value
+        }
+    }
+}
