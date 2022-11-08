@@ -42,7 +42,7 @@
             "value": "" // TODO: Fill in parameter value
         },
         "location": {
-            "value": "" // TODO: Fill in parameter value
+            "value": "centralus"
         }
     }
 }
