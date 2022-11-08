@@ -42,4 +42,25 @@ jobs:
            
            # Incremental (only add resources to resource group) or Complete (remove extra resources from resource group) or Validate (only validates the template).
            deploymentMode: Complete
+     
+      - name: Deploy Azure Resource Manager (ARM) Template
+        uses: Azure/arm-deploy@v1.0.8
+        with:
+         # Provide the scope of the deployment. Valid values are: 'resourcegroup', 'managementgroup', 'subscription'
+         scope: resourcegroup
+         
+         # Override the Subscription Id set by Azure Login.
+         subscriptionId: ${{secrets.Subsciption_Id}}
+         
+         # Provide the name of a resource group, only required for resource Group deployments.
+         resourceGroupName: rg-poc
+         
+         # Specify the path or URL to the Azure Resource Manager template.
+         template: ./ArmTemplates/apim.json
+         
+         # Incremental (only add resources to resource group) or Complete (remove extra resources from resource group) or Validate (only validates the template).
+         deploymentMode: Complete
+         
+         # Supply deployment parameter values.
+         parameters: ./ArmTemplates/apim.parameters.json
     
