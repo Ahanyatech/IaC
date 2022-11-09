@@ -59,7 +59,7 @@ jobs:
          template: ./ArmTemplates/apim.json
          
          # Incremental (only add resources to resource group) or Complete (remove extra resources from resource group) or Validate (only validates the template).
-         deploymentMode: Complete
+         deploymentMode: Incremental
          
          # Supply deployment parameter values.
          parameters: ./ArmTemplates/apim.parameters.json
