@@ -41,7 +41,7 @@ jobs:
            template: ./ArmTemplates/resourcegroup.json
            
            # Incremental (only add resources to resource group) or Complete (remove extra resources from resource group) or Validate (only validates the template).
-           deploymentMode: Complete
+           deploymentMode: Incremental
      
       - name: Deploy Azure Resource Manager (ARM) Template
         uses: Azure/arm-deploy@v1.0.8
