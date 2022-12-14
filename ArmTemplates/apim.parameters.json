@@ -9,7 +9,7 @@
             "value": "Contoso" // TODO: Fill in parameter value
         },
         "sku": {
-            "value": "Standard"
+            "value": "Developer"
         },
         "skuCount": {
             "value": 1
