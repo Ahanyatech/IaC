@@ -25,23 +25,23 @@ jobs:
           # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
           creds: ${{secrets.AZURE_CREDENTIALS}}
           
-      - name: Deploy Azure Resource Manager (ARM) Template
-        uses: Azure/arm-deploy@v1.0.8
-        with:
+      #- name: Deploy Azure Resource Manager (ARM) Template
+        #uses: Azure/arm-deploy@v1.0.8
+        #with:
            # Provide the scope of the deployment. Valid values are: 'resourcegroup', 'managementgroup', 'subscription'
-           scope: subscription
+           #scope: subscription
            
            # Override the Subscription Id set by Azure Login.
-           subscriptionId: ${{secrets.Subsciption_Id}}
+           #subscriptionId: ${{secrets.Subsciption_Id}}
            
            # Provide the target region, only required for management Group or Subscription deployments.
-           region: centralus
+           #region: centralus
            
            # Specify the path or URL to the Azure Resource Manager template.
-           template: ./ArmTemplates/resourcegroup.json
+           #template: ./ArmTemplates/resourcegroup.json
            
            # Incremental (only add resources to resource group) or Complete (remove extra resources from resource group) or Validate (only validates the template).
-           deploymentMode: Incremental
+           #deploymentMode: Incremental
      
       - name: Deploy Azure Resource Manager (ARM) Template
         uses: Azure/arm-deploy@v1.0.8
