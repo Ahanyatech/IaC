@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "StorageAccountName": {
-            "value": "[format('samplestorage{0}', uniqueString(resourceGroup().id))]"
+            "value": "[format('sample{0}', uniqueString(resourceGroup().id))]"
         },
         "StorageAccountType": {
             "value": "Standard_LRS"
