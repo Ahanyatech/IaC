@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "StorageAccountName": {
-            "value": "sample"
+            "value": "samplefdssdghgsfhfghghs"
         },
         "StorageAccountType": {
             "value": "Standard_LRS"
